@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export_category("Status") # for showing the status bar (no coding input purpose)
 @export var speed: int = 400 # speed of the character
-@export var attack_speed: float = 0.6
+#@export var attack_speed: float = 0.6 # changed to dynamic using equations class
 @export var attack_damage: int = 60
 @export var hitpoints: int = 150
 
@@ -11,12 +11,23 @@ extends CharacterBody2D
 @onready var animation_playback: AnimationNodeStateMachinePlayback = $AnimationTree["parameters/playback"]
 
 var move_direction: Vector2 = Vector2.ZERO # current direction of the player
+var attack_speed: float 
 
 # different state of player
 enum State {
 	IDLE, RUN, ATTACK, DEAD
 }
 var state: State = State.IDLE # initial state
+
+func _ready() -> void:
+	calculate_stats()
+
+func calculate_stats() -> void:
+	# res://scripts/classes/equations.gd
+	attack_speed = Equations.calculate_attack_spped()
+	
+	var time_factor: float = Equations.BASE_ATTACK_SPEED / attack_speed
+	animation_tree.set("parameters/attack/TimeScale/scale", time_factor)
 
 func update_animation() -> void:
 	# matching state
