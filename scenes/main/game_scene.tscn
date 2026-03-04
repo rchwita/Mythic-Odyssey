@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bypkl0b046l8g"]
 
-[ext_resource type="Script" uid="uid://bundrffwgjhs1" path="res://scripts/game_scene.gd" id="1_rfwcf"]
-[ext_resource type="PackedScene" path="res://scenes/maps/test_map.tscn" id="1_sdya7"]
+[ext_resource type="Script" uid="uid://bundrffwgjhs1" path="res://scripts/source_scripts/game_scene.gd" id="1_rfwcf"]
+[ext_resource type="PackedScene" uid="uid://c4lbbh0f1n8c" path="res://scenes/maps/test_map.tscn" id="1_sdya7"]
 
 [node name="GameScene" type="Node2D"]
+position = Vector2(132, -751)
 script = ExtResource("1_rfwcf")
 
 [node name="TestMap" parent="." instance=ExtResource("1_sdya7")]

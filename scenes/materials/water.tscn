@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0mio6bp4pkrg"]
+
+[ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap1/Tileset/Water Background color.png" id="1_je2o6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t8dge"]
+texture = ExtResource("1_je2o6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qgarv"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_t8dge")
+
+[node name="water" type="TileMapLayer"]
+tile_set = SubResource("TileSet_qgarv")
