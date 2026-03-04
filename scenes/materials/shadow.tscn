@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl41xo6ro4xtn"]
+
+[ext_resource type="TileSet" uid="uid://d3qcq0htkw3gj" path="res://scenes/maps/test_map_shadow.tres" id="1_0xb2w"]
+
+[node name="shadow" type="TileMapLayer"]
+tile_set = ExtResource("1_0xb2w")
