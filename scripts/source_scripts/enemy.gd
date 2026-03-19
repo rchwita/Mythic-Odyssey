@@ -32,7 +32,7 @@ var state: State = State.IDLE
 func _ready() -> void:
 	animation_tree.set_active(true)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if state == State.DEAD:
 		return
 	if state == State.ATTACK:
