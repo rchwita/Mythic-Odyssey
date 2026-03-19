@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://duplnd3ut3e00"]
 
-[ext_resource type="Script" uid="uid://saqrnrglfwwy" path="res://scripts/enemy.gd" id="1_ktqfp"]
+[ext_resource type="Script" uid="uid://saqrnrglfwwy" path="res://scripts/source_scripts/enemy.gd" id="1_ktqfp"]
 [ext_resource type="PackedScene" uid="uid://cxl4hrwxs5mg3" path="res://scenes/effects/dead.tscn" id="2_defa4"]
 [ext_resource type="Texture2D" uid="uid://cd2p2ui15u8tw" path="res://assets/enemy/Warrior_Red.png" id="3_jr1g6"]
 
@@ -386,7 +386,6 @@ avoidance_enabled = true
 radius = 48.0
 neighbor_distance = 128.0
 max_speed = 128.0
-debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(0.7862273, 0.16282648, 0.33512664, 1)
 

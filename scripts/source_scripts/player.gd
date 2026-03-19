@@ -9,6 +9,7 @@ extends CharacterBody2D
 # adding animation
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var animation_playback: AnimationNodeStateMachinePlayback = $AnimationTree["parameters/playback"]
+@onready var player_run: AudioStreamPlayer = $PlayerRun
 
 var move_direction: Vector2 = Vector2.ZERO # current direction of the player
 var attack_speed: float 
@@ -57,6 +58,14 @@ func movement_loop() -> void:
 			$Sprite2D.flip_h = false
 	
 	move_and_slide() # for 4-direction movement
+
+# RUNNING SOUND CONTROL
+	if motion != Vector2.ZERO:
+		if not player_run.playing:
+			player_run.play()
+	else:
+		if player_run.playing:
+			player_run.stop()
 	
 	#updating animation
 	if motion != Vector2.ZERO and state == State.IDLE:
@@ -88,7 +97,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		attack()
 
-func _physics_process(delta: float) -> void: # default physics
+func _physics_process(_delta: float) -> void: # default physics
 	if state != State.ATTACK:
 		movement_loop() # appling physics to movement_loop func
 
