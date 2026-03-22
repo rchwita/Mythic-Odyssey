@@ -55,3 +55,10 @@ func level_up(new_experience: int) -> void:
 	PlayerData.level += 1
 	PlayerData.experience = new_experience
 	levelup.emit()
+
+func _on_pause_button_pressed() -> void:
+	var pause_screen: Control = load("res://scenes/UI/pause_screen.tscn").instantiate()
+	pause_screen.need_to_kill = total_enemies
+	pause_screen.killed = killed_enemies
+	$UI.add_child(pause_screen)
+	$Maps.process_mode = Node.PROCESS_MODE_DISABLED

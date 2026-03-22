@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmp6wwmjpqlue"]
+[gd_scene load_steps=10 format=3 uid="uid://bmp6wwmjpqlue"]
 
 [ext_resource type="Script" uid="uid://bundrffwgjhs1" path="res://scripts/source_scripts/game_scene.gd" id="1_rfwcf"]
 [ext_resource type="PackedScene" uid="uid://btxrqwt6nij0b" path="res://scenes/UI/end_game_screen.tscn" id="2_5odut"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://67rp7nhc1kr4" path="res://assets/UI/Elements/Carved_3Slides.png" id="5_wktqh"]
 [ext_resource type="Texture2D" uid="uid://co8thsdtax4eg" path="res://assets/UI/Elements/Banner_Connection_Up.png" id="6_tj35g"]
 [ext_resource type="FontFile" uid="uid://cdf3ew41d73tr" path="res://assets/UI/Fonts/NewRocker-Regular.ttf" id="7_o41ig"]
+[ext_resource type="Texture2D" uid="uid://dbnj2wef6500m" path="res://assets/UI/Buttons/TinySquareBlueButton.png" id="7_wktqh"]
+[ext_resource type="Texture2D" uid="uid://bdoio56vtqra" path="res://assets/UI/Buttons/SmallBlueSquareButton_Regular.png" id="8_wktqh"]
+[ext_resource type="Texture2D" uid="uid://bv8awetugepwb" path="res://assets/UI/Buttons/TinySquareRedButton.png" id="9_tj35g"]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_rfwcf")
@@ -80,3 +83,34 @@ theme_override_font_sizes/font_size = 50
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PauseButton" type="TextureButton" parent="UI"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 1205.0
+offset_top = 70.0
+offset_right = 1305.0
+offset_bottom = 170.0
+texture_normal = ExtResource("7_wktqh")
+texture_pressed = ExtResource("8_wktqh")
+texture_hover = ExtResource("9_tj35g")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/PauseButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -29.0
+offset_right = 17.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "⏸"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="UI/PauseButton" to="." method="_on_pause_button_pressed"]
