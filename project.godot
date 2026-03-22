@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mythic Odyssey"
-run/main_scene="uid://bmp6wwmjpqlue"
+run/main_scene="uid://dbp685nybdb7v"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 PlayerData="*res://scripts/global_data/player_data.gd"
 LevelData="*res://scripts/static_data/level_data.gd"
+
+[display]
+
+window/size/viewport_width=1366
+window/size/viewport_height=768
+window/size/mode=2
 
 [global_group]
 

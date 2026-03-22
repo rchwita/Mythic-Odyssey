@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://btxrqwt6nij0b"]
+
+[ext_resource type="Script" uid="uid://bxtrfoleklrxe" path="res://scripts/source_scripts/end_game_screen.gd" id="1_f03wi"]
+[ext_resource type="FontFile" uid="uid://br8corvuvf52t" path="res://assets/UI/Fonts/Fruktur-Regular.ttf" id="1_v0th6"]
+[ext_resource type="Texture2D" uid="uid://p2cgqek0eeo4" path="res://assets/UI/Buttons/Button_Blue_3Slides.png" id="2_f03wi"]
+[ext_resource type="Texture2D" uid="uid://bx5txb0xgndw2" path="res://assets/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="3_f04ip"]
+[ext_resource type="Texture2D" uid="uid://dlmcrj55x8vgx" path="res://assets/UI/Buttons/Button_Hover_3Slides.png" id="4_rtum8"]
+
+[node name="EndGameScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f03wi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.48235294)
+
+[node name="Contents" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Message" type="Label" parent="Contents"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_v0th6")
+theme_override_font_sizes/font_size = 200
+text = "Fail"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Contents"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Replay" type="TextureButton" parent="Contents/Buttons"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+texture_normal = ExtResource("2_f03wi")
+texture_pressed = ExtResource("3_f04ip")
+texture_hover = ExtResource("4_rtum8")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Contents/Buttons/Replay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -21.0
+offset_right = 28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_v0th6")
+theme_override_font_sizes/font_size = 30
+text = "Replay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="TextureButton" parent="Contents/Buttons"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+texture_normal = ExtResource("2_f03wi")
+texture_pressed = ExtResource("3_f04ip")
+texture_hover = ExtResource("4_rtum8")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Contents/Buttons/MainMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -21.0
+offset_right = 28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_v0th6")
+theme_override_font_sizes/font_size = 30
+text = "Back to Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Contents/Buttons/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Contents/Buttons/MainMenu" to="." method="_on_main_menu_pressed"]

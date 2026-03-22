@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
+signal game_over(win: bool)
+signal update_hp_bar(value: int)
+
 @export_category("Status") # for showing the status bar (no coding input purpose)
 @export var speed: int = 400 # speed of the character
-#@export var attack_speed: float = 0.6 # changed to dynamic using equations class
 @export var attack_damage: int = 60
 @export var hitpoints: int = 150
 
@@ -13,6 +15,7 @@ extends CharacterBody2D
 
 var move_direction: Vector2 = Vector2.ZERO # current direction of the player
 var attack_speed: float 
+var max_hitpoints: int
 
 # different state of player
 enum State {
@@ -21,6 +24,7 @@ enum State {
 var state: State = State.IDLE # initial state
 
 func _ready() -> void:
+	max_hitpoints = hitpoints
 	calculate_stats()
 
 func calculate_stats() -> void:
@@ -103,11 +107,15 @@ func _physics_process(_delta: float) -> void: # default physics
 
 func take_damage(damage_taken: int) -> void:
 	hitpoints -= damage_taken
+	@warning_ignore("integer_division")
+	update_hp_bar.emit((hitpoints * 100) / max_hitpoints)
+	
 	if hitpoints <= 0:
 		death()
 
 func death() -> void:
 	print("you died")
+	game_over.emit(false)
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	area.owner.take_damage(attack_damage)

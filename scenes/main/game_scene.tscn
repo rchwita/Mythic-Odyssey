@@ -1,10 +1,82 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmp6wwmjpqlue"]
+[gd_scene load_steps=7 format=3 uid="uid://bmp6wwmjpqlue"]
 
 [ext_resource type="Script" uid="uid://bundrffwgjhs1" path="res://scripts/source_scripts/game_scene.gd" id="1_rfwcf"]
-[ext_resource type="PackedScene" uid="uid://c4lbbh0f1n8c" path="res://scenes/levels/level_1.tscn" id="1_sdya7"]
+[ext_resource type="PackedScene" uid="uid://btxrqwt6nij0b" path="res://scenes/UI/end_game_screen.tscn" id="2_5odut"]
+[ext_resource type="Script" uid="uid://4wxkoddowonk" path="res://scripts/source_scripts/hud.gd" id="4_o41ig"]
+[ext_resource type="Texture2D" uid="uid://67rp7nhc1kr4" path="res://assets/UI/Elements/Carved_3Slides.png" id="5_wktqh"]
+[ext_resource type="Texture2D" uid="uid://co8thsdtax4eg" path="res://assets/UI/Elements/Banner_Connection_Up.png" id="6_tj35g"]
+[ext_resource type="FontFile" uid="uid://cdf3ew41d73tr" path="res://assets/UI/Fonts/NewRocker-Regular.ttf" id="7_o41ig"]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_rfwcf")
+end_game_screen_packed = ExtResource("2_5odut")
 metadata/_edit_lock_ = true
 
-[node name="TestMap" parent="." instance=ExtResource("1_sdya7")]
+[node name="Maps" type="Node2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_o41ig")
+
+[node name="HP" type="TextureRect" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 50.0
+offset_right = 470.0
+offset_bottom = 120.0
+texture = ExtResource("5_wktqh")
+
+[node name="HPBar" type="TextureProgressBar" parent="UI/HUD/HP"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -27.5
+offset_right = 190.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("5_wktqh")
+tint_progress = Color(0, 1, 0, 1)
+
+[node name="EnemyKill" type="TextureRect" parent="UI/HUD"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 50.0
+offset_top = 92.0
+offset_right = 242.0
+offset_bottom = 284.0
+texture = ExtResource("6_tj35g")
+
+[node name="KillValue" type="Label" parent="UI/HUD/EnemyKill"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -25.5
+offset_right = 38.5
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_o41ig")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

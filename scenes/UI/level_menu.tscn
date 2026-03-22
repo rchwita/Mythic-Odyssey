@@ -1,0 +1,429 @@
+[gd_scene load_steps=16 format=4 uid="uid://clr5vv53m6c5l"]
+
+[ext_resource type="FontFile" uid="uid://br8corvuvf52t" path="res://assets/UI/Fonts/Fruktur-Regular.ttf" id="1_6yacc"]
+[ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap1/Tileset/Water Background color.png" id="1_u2ndr"]
+[ext_resource type="Script" uid="uid://dkp23ikj4vvej" path="res://scripts/source_scripts/level_menu.gd" id="1_vl0d2"]
+[ext_resource type="Texture2D" uid="uid://ddr81q5m8b6ms" path="res://assets/UI/Banners/BigBanner.png" id="2_od4ud"]
+[ext_resource type="Texture2D" uid="uid://56puee4xhi4g" path="res://assets/UI/Banners/SmallBanner.png" id="3_60uxb"]
+[ext_resource type="Texture2D" uid="uid://ckb4l1hw4i0il" path="res://assets/UI/Ribbons/Ribbon_Blue.png" id="4_4qxtg"]
+[ext_resource type="Texture2D" uid="uid://p2cgqek0eeo4" path="res://assets/UI/Buttons/Button_Blue_3Slides.png" id="5_4qxtg"]
+[ext_resource type="Texture2D" uid="uid://bx5txb0xgndw2" path="res://assets/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="6_vl0d2"]
+[ext_resource type="Texture2D" uid="uid://dlmcrj55x8vgx" path="res://assets/UI/Buttons/Button_Hover_3Slides.png" id="7_e7gcb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vl0d2"]
+texture = ExtResource("1_u2ndr")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_e7gcb"]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_vl0d2")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e7gcb"]
+texture = ExtResource("2_od4ud")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+10:0/0 = 0
+0:2/0 = 0
+5:2/0 = 0
+10:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+0:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+6:6/0 = 0
+0:7/0 = 0
+2:7/0 = 0
+4:7/0 = 0
+6:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gwu6"]
+texture = ExtResource("3_60uxb")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+3:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvf43"]
+texture = ExtResource("4_4qxtg")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_x86uh"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_e7gcb")
+sources/1 = SubResource("TileSetAtlasSource_6gwu6")
+sources/2 = SubResource("TileSetAtlasSource_pvf43")
+
+[node name="LevelMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vl0d2")
+metadata/_edit_lock_ = true
+
+[node name="Design" type="TileMapLayer" parent="."]
+position = Vector2(-3, 0)
+
+[node name="BackGround" type="TileMapLayer" parent="Design"]
+tile_map_data = PackedByteArray("AAD+//7/AQAAAAAAAAD+////AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD+/wIAAQAAAAAAAAD+/wMAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wUAAQAAAAAAAAD+/wYAAQAAAAAAAAD+/wcAAQAAAAAAAAD+/wgAAQAAAAAAAAD+/wkAAQAAAAAAAAD+/woAAQAAAAAAAAD+/wsAAQAAAAAAAAD+/wwAAQAAAAAAAAD///7/AQAAAAAAAAD/////AQAAAAAAAAD//wAAAQAAAAAAAAD//wEAAQAAAAAAAAD//wIAAQAAAAAAAAD//wMAAQAAAAAAAAD//wQAAQAAAAAAAAD//wUAAQAAAAAAAAD//wYAAQAAAAAAAAD//wcAAQAAAAAAAAD//wgAAQAAAAAAAAD//wkAAQAAAAAAAAD//woAAQAAAAAAAAD//wsAAQAAAAAAAAD//wwAAQAAAAAAAAAAAP7/AQAAAAAAAAAAAP//AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAgAAQAAAAAAAAAAAAkAAQAAAAAAAAAAAAoAAQAAAAAAAAAAAAsAAQAAAAAAAAAAAAwAAQAAAAAAAAABAP7/AQAAAAAAAAABAP//AQAAAAAAAAABAAAAAQAAAAAAAAABAAEAAQAAAAAAAAABAAIAAQAAAAAAAAABAAMAAQAAAAAAAAABAAQAAQAAAAAAAAABAAUAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAABAAgAAQAAAAAAAAABAAkAAQAAAAAAAAABAAoAAQAAAAAAAAABAAsAAQAAAAAAAAABAAwAAQAAAAAAAAACAP7/AQAAAAAAAAACAP//AQAAAAAAAAACAAAAAQAAAAAAAAACAAEAAQAAAAAAAAACAAIAAQAAAAAAAAACAAMAAQAAAAAAAAACAAQAAQAAAAAAAAACAAUAAQAAAAAAAAACAAYAAQAAAAAAAAACAAcAAQAAAAAAAAACAAgAAQAAAAAAAAACAAkAAQAAAAAAAAACAAoAAQAAAAAAAAACAAsAAQAAAAAAAAACAAwAAQAAAAAAAAADAP7/AQAAAAAAAAADAP//AQAAAAAAAAADAAAAAQAAAAAAAAADAAEAAQAAAAAAAAADAAIAAQAAAAAAAAADAAMAAQAAAAAAAAADAAQAAQAAAAAAAAADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAADAAcAAQAAAAAAAAADAAgAAQAAAAAAAAADAAkAAQAAAAAAAAADAAoAAQAAAAAAAAADAAsAAQAAAAAAAAADAAwAAQAAAAAAAAAEAP7/AQAAAAAAAAAEAP//AQAAAAAAAAAEAAAAAQAAAAAAAAAEAAEAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAMAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAAEAAYAAQAAAAAAAAAEAAcAAQAAAAAAAAAEAAgAAQAAAAAAAAAEAAkAAQAAAAAAAAAEAAoAAQAAAAAAAAAEAAsAAQAAAAAAAAAEAAwAAQAAAAAAAAAFAP7/AQAAAAAAAAAFAP//AQAAAAAAAAAFAAAAAQAAAAAAAAAFAAEAAQAAAAAAAAAFAAIAAQAAAAAAAAAFAAMAAQAAAAAAAAAFAAQAAQAAAAAAAAAFAAUAAQAAAAAAAAAFAAYAAQAAAAAAAAAFAAcAAQAAAAAAAAAFAAgAAQAAAAAAAAAFAAkAAQAAAAAAAAAFAAoAAQAAAAAAAAAFAAsAAQAAAAAAAAAFAAwAAQAAAAAAAAAGAP7/AQAAAAAAAAAGAP//AQAAAAAAAAAGAAAAAQAAAAAAAAAGAAEAAQAAAAAAAAAGAAIAAQAAAAAAAAAGAAMAAQAAAAAAAAAGAAQAAQAAAAAAAAAGAAUAAQAAAAAAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAAAAAAGAAgAAQAAAAAAAAAGAAkAAQAAAAAAAAAGAAoAAQAAAAAAAAAGAAsAAQAAAAAAAAAGAAwAAQAAAAAAAAAHAP7/AQAAAAAAAAAHAP//AQAAAAAAAAAHAAAAAQAAAAAAAAAHAAEAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAMAAQAAAAAAAAAHAAQAAQAAAAAAAAAHAAUAAQAAAAAAAAAHAAYAAQAAAAAAAAAHAAcAAQAAAAAAAAAHAAgAAQAAAAAAAAAHAAkAAQAAAAAAAAAHAAoAAQAAAAAAAAAHAAsAAQAAAAAAAAAHAAwAAQAAAAAAAAAIAP7/AQAAAAAAAAAIAP//AQAAAAAAAAAIAAAAAQAAAAAAAAAIAAEAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAMAAQAAAAAAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAAAAAAIAAYAAQAAAAAAAAAIAAcAAQAAAAAAAAAIAAgAAQAAAAAAAAAIAAkAAQAAAAAAAAAIAAoAAQAAAAAAAAAIAAsAAQAAAAAAAAAIAAwAAQAAAAAAAAAJAP7/AQAAAAAAAAAJAP//AQAAAAAAAAAJAAAAAQAAAAAAAAAJAAEAAQAAAAAAAAAJAAIAAQAAAAAAAAAJAAMAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAJAAYAAQAAAAAAAAAJAAcAAQAAAAAAAAAJAAgAAQAAAAAAAAAJAAkAAQAAAAAAAAAJAAoAAQAAAAAAAAAJAAsAAQAAAAAAAAAJAAwAAQAAAAAAAAAKAP7/AQAAAAAAAAAKAP//AQAAAAAAAAAKAAAAAQAAAAAAAAAKAAEAAQAAAAAAAAAKAAIAAQAAAAAAAAAKAAMAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAAAAAAKAAYAAQAAAAAAAAAKAAcAAQAAAAAAAAAKAAgAAQAAAAAAAAAKAAkAAQAAAAAAAAAKAAoAAQAAAAAAAAAKAAsAAQAAAAAAAAAKAAwAAQAAAAAAAAALAP7/AQAAAAAAAAALAP//AQAAAAAAAAALAAAAAQAAAAAAAAALAAEAAQAAAAAAAAALAAIAAQAAAAAAAAALAAMAAQAAAAAAAAALAAQAAQAAAAAAAAALAAUAAQAAAAAAAAALAAYAAQAAAAAAAAALAAcAAQAAAAAAAAALAAgAAQAAAAAAAAALAAkAAQAAAAAAAAALAAoAAQAAAAAAAAALAAsAAQAAAAAAAAALAAwAAQAAAAAAAAAMAP7/AQAAAAAAAAAMAP//AQAAAAAAAAAMAAAAAQAAAAAAAAAMAAEAAQAAAAAAAAAMAAIAAQAAAAAAAAAMAAMAAQAAAAAAAAAMAAQAAQAAAAAAAAAMAAUAAQAAAAAAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAAAAAAMAAgAAQAAAAAAAAAMAAkAAQAAAAAAAAAMAAoAAQAAAAAAAAAMAAsAAQAAAAAAAAAMAAwAAQAAAAAAAAANAP7/AQAAAAAAAAANAP//AQAAAAAAAAANAAAAAQAAAAAAAAANAAEAAQAAAAAAAAANAAIAAQAAAAAAAAANAAMAAQAAAAAAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAANAAYAAQAAAAAAAAANAAcAAQAAAAAAAAANAAgAAQAAAAAAAAANAAkAAQAAAAAAAAANAAoAAQAAAAAAAAANAAsAAQAAAAAAAAANAAwAAQAAAAAAAAAOAP7/AQAAAAAAAAAOAP//AQAAAAAAAAAOAAAAAQAAAAAAAAAOAAEAAQAAAAAAAAAOAAIAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAQAAQAAAAAAAAAOAAUAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAcAAQAAAAAAAAAOAAgAAQAAAAAAAAAOAAkAAQAAAAAAAAAOAAoAAQAAAAAAAAAOAAsAAQAAAAAAAAAOAAwAAQAAAAAAAAAPAP7/AQAAAAAAAAAPAP//AQAAAAAAAAAPAAAAAQAAAAAAAAAPAAEAAQAAAAAAAAAPAAIAAQAAAAAAAAAPAAMAAQAAAAAAAAAPAAQAAQAAAAAAAAAPAAUAAQAAAAAAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAAAAAAPAAgAAQAAAAAAAAAPAAkAAQAAAAAAAAAPAAoAAQAAAAAAAAAPAAsAAQAAAAAAAAAPAAwAAQAAAAAAAAAQAP7/AQAAAAAAAAAQAP//AQAAAAAAAAAQAAAAAQAAAAAAAAAQAAEAAQAAAAAAAAAQAAIAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAYAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAgAAQAAAAAAAAAQAAkAAQAAAAAAAAAQAAoAAQAAAAAAAAAQAAsAAQAAAAAAAAAQAAwAAQAAAAAAAAARAP7/AQAAAAAAAAARAP//AQAAAAAAAAARAAAAAQAAAAAAAAARAAEAAQAAAAAAAAARAAIAAQAAAAAAAAARAAMAAQAAAAAAAAARAAQAAQAAAAAAAAARAAUAAQAAAAAAAAARAAYAAQAAAAAAAAARAAcAAQAAAAAAAAARAAgAAQAAAAAAAAARAAkAAQAAAAAAAAARAAoAAQAAAAAAAAARAAsAAQAAAAAAAAARAAwAAQAAAAAAAAASAP7/AQAAAAAAAAASAP//AQAAAAAAAAASAAAAAQAAAAAAAAASAAEAAQAAAAAAAAASAAIAAQAAAAAAAAASAAMAAQAAAAAAAAASAAQAAQAAAAAAAAASAAUAAQAAAAAAAAASAAYAAQAAAAAAAAASAAcAAQAAAAAAAAASAAgAAQAAAAAAAAASAAkAAQAAAAAAAAASAAoAAQAAAAAAAAASAAsAAQAAAAAAAAASAAwAAQAAAAAAAAATAP7/AQAAAAAAAAATAP//AQAAAAAAAAATAAAAAQAAAAAAAAATAAEAAQAAAAAAAAATAAIAAQAAAAAAAAATAAMAAQAAAAAAAAATAAQAAQAAAAAAAAATAAUAAQAAAAAAAAATAAYAAQAAAAAAAAATAAcAAQAAAAAAAAATAAgAAQAAAAAAAAATAAkAAQAAAAAAAAATAAoAAQAAAAAAAAATAAsAAQAAAAAAAAATAAwAAQAAAAAAAAAUAP7/AQAAAAAAAAAUAP//AQAAAAAAAAAUAAAAAQAAAAAAAAAUAAEAAQAAAAAAAAAUAAIAAQAAAAAAAAAUAAMAAQAAAAAAAAAUAAQAAQAAAAAAAAAUAAUAAQAAAAAAAAAUAAYAAQAAAAAAAAAUAAcAAQAAAAAAAAAUAAgAAQAAAAAAAAAUAAkAAQAAAAAAAAAUAAoAAQAAAAAAAAAUAAsAAQAAAAAAAAAUAAwAAQAAAAAAAAAVAP7/AQAAAAAAAAAVAP//AQAAAAAAAAAVAAAAAQAAAAAAAAAVAAEAAQAAAAAAAAAVAAIAAQAAAAAAAAAVAAMAAQAAAAAAAAAVAAQAAQAAAAAAAAAVAAUAAQAAAAAAAAAVAAYAAQAAAAAAAAAVAAcAAQAAAAAAAAAVAAgAAQAAAAAAAAAVAAkAAQAAAAAAAAAVAAoAAQAAAAAAAAAVAAsAAQAAAAAAAAAVAAwAAQAAAAAAAAAWAP7/AQAAAAAAAAAWAP//AQAAAAAAAAAWAAAAAQAAAAAAAAAWAAEAAQAAAAAAAAAWAAIAAQAAAAAAAAAWAAMAAQAAAAAAAAAWAAQAAQAAAAAAAAAWAAUAAQAAAAAAAAAWAAYAAQAAAAAAAAAWAAcAAQAAAAAAAAAWAAgAAQAAAAAAAAAWAAkAAQAAAAAAAAAWAAoAAQAAAAAAAAAWAAsAAQAAAAAAAAAWAAwAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_e7gcb")
+
+[node name="Items" type="TileMapLayer" parent="Design"]
+position = Vector2(-2, 2)
+tile_map_data = PackedByteArray("AAABAAEAAgAAAAEAAAACAAEAAgABAAEAAAACAAIAAAAAAAAAAAACAAMAAAAAAAIAAAACAAQAAAAAAAIAAAACAAUAAAAAAAIAAAACAAYAAAAAAAIAAAACAAcAAgAIAAAAAAACAAgAAgAIAAEAAAACAAkAAgAIAAIAAAADAAEAAgADAAEAAAADAAIAAAAEAAAAAAADAAMAAAAFAAIAAAADAAQAAAAFAAIAAAADAAUAAAAFAAIAAAADAAYAAAAFAAIAAAADAAcAAgAJAAAAAAADAAgAAgAJAAEAAAADAAkAAgAJAAIAAAAEAAEAAgADAAEAAAAEAAIAAAAEAAAAAAAEAAMAAAAFAAIAAAAEAAQAAAAFAAIAAAAEAAUAAAAFAAIAAAAEAAYAAAAFAAIAAAAEAAcAAgAKAAAAAAAEAAgAAgAKAAEAAAAEAAkAAgAKAAIAAAAFAAEAAgADAAEAAAAFAAIAAAAEAAAAAAAFAAMAAAAFAAIAAAAFAAQAAAAFAAIAAAAFAAUAAAAFAAIAAAAFAAYAAAAFAAIAAAAFAAcAAAAEAAQAAAAGAAEAAgADAAEAAAAGAAIAAAAEAAAAAAAGAAMAAAAFAAIAAAAGAAQAAAAFAAIAAAAGAAUAAAAFAAIAAAAGAAYAAAAFAAIAAAAGAAcAAAAEAAQAAAAHAAEAAgADAAEAAAAHAAIAAAAEAAAAAAAHAAMAAAAFAAIAAAAHAAQAAAAFAAIAAAAHAAUAAAAFAAIAAAAHAAYAAAAFAAIAAAAHAAcAAAAEAAQAAAAIAAEAAgADAAEAAAAIAAIAAAAEAAAAAAAIAAMAAAAFAAIAAAAIAAQAAAAFAAIAAAAIAAUAAAAFAAIAAAAIAAYAAAAFAAIAAAAIAAcAAAAEAAQAAAAJAAEAAgADAAEAAAAJAAIAAAAEAAAAAAAJAAMAAAAFAAIAAAAJAAQAAAAFAAIAAAAJAAUAAAAFAAIAAAAJAAYAAAAFAAIAAAAJAAcAAAAEAAQAAAAKAAEAAgADAAEAAAAKAAIAAAAGAAAAAAAKAAMAAAAFAAIAAAAKAAQAAAAFAAIAAAAKAAUAAAAFAAIAAAAKAAYAAAAFAAIAAAAKAAcAAAAGAAQAAAALAAEAAgADAAEAAAALAAIAAAAEAAAAAAALAAMAAAAFAAIAAAALAAQAAAAFAAIAAAALAAUAAAAFAAIAAAALAAYAAAAFAAIAAAALAAcAAAAEAAQAAAAMAAEAAgADAAEAAAAMAAIAAAAEAAAAAAAMAAMAAAAFAAIAAAAMAAQAAAAFAAIAAAAMAAUAAAAFAAIAAAAMAAYAAAAFAAIAAAAMAAcAAAAEAAQAAAANAAEAAgADAAEAAAANAAIAAAAEAAAAAAANAAMAAAAFAAIAAAANAAQAAAAFAAIAAAANAAUAAAAFAAIAAAANAAYAAAAFAAIAAAANAAcAAAAEAAQAAAAOAAEAAgADAAEAAAAOAAIAAAAEAAAAAAAOAAMAAAAFAAIAAAAOAAQAAAAFAAIAAAAOAAUAAAAFAAIAAAAOAAYAAAAFAAIAAAAOAAcAAAAEAAQAAAAPAAEAAgADAAEAAAAPAAIAAAAEAAAAAAAPAAMAAAAFAAIAAAAPAAQAAAAFAAIAAAAPAAUAAAAFAAIAAAAPAAYAAAAFAAIAAAAPAAcAAAAEAAQAAAAQAAEAAgADAAEAAAAQAAIAAAAEAAAAAAAQAAMAAAAFAAIAAAAQAAQAAAAFAAIAAAAQAAUAAAAFAAIAAAAQAAYAAAAFAAIAAAAQAAcAAgAMAAAAAAAQAAgAAgAMAAEAAAAQAAkAAgAMAAIAAAARAAEAAgADAAEAAAARAAIAAAAEAAAAAAARAAMAAAAFAAIAAAARAAQAAAAFAAIAAAARAAUAAAAFAAIAAAARAAYAAAAFAAIAAAARAAcAAgANAAAAAAARAAgAAgANAAEAAAARAAkAAgANAAIAAAASAAEAAgAFAAEAAAASAAIAAAAKAAAAAAASAAMAAAAKAAIAAAASAAQAAAAKAAIAAAASAAUAAAAKAAIAAAASAAYAAAAKAAIAAAASAAcAAgAOAAAAAAASAAgAAgAOAAEAAAASAAkAAgAOAAIAAAATAAEAAgAGAAEAAAABAAAAAgAAAAAAAAACAAAAAgABAAAAAAADAAAAAgADAAAAAAAEAAAAAgADAAAAAAAFAAAAAgADAAAAAAAGAAAAAgADAAAAAAAHAAAAAgADAAAAAAAIAAAAAgADAAAAAAAJAAAAAgADAAAAAAAKAAAAAgADAAAAAAALAAAAAgADAAAAAAAMAAAAAgADAAAAAAANAAAAAgADAAAAAAAOAAAAAgADAAAAAAAPAAAAAgADAAAAAAAQAAAAAgADAAAAAAARAAAAAgADAAAAAAASAAAAAgAFAAAAAAATAAAAAgAGAAAAAAA=")
+tile_set = SubResource("TileSet_x86uh")
+
+[node name="Label" type="Label" parent="Design/Items"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 617.0
+offset_top = 47.0
+offset_right = 723.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_6yacc")
+theme_override_font_sizes/font_size = 60
+text = "Levels"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -206.0
+offset_right = 466.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 140
+alignment = 1
+
+[node name="Col1" type="VBoxContainer" parent="Buttons"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Level1" type="TextureButton" parent="Buttons/Col1"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+texture_normal = ExtResource("5_4qxtg")
+texture_pressed = ExtResource("6_vl0d2")
+texture_hover = ExtResource("7_e7gcb")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Col1/Level1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -21.0
+offset_right = 28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_6yacc")
+theme_override_font_sizes/font_size = 30
+text = "Level 01"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level2" type="TextureButton" parent="Buttons/Col1"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+texture_normal = ExtResource("5_4qxtg")
+texture_pressed = ExtResource("6_vl0d2")
+texture_hover = ExtResource("7_e7gcb")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Col1/Level2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -21.0
+offset_right = 28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_6yacc")
+theme_override_font_sizes/font_size = 30
+text = "Level 02"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level3" type="TextureButton" parent="Buttons/Col1"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+texture_normal = ExtResource("5_4qxtg")
+texture_pressed = ExtResource("6_vl0d2")
+texture_hover = ExtResource("7_e7gcb")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Col1/Level3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -21.0
+offset_right = 28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_6yacc")
+theme_override_font_sizes/font_size = 30
+text = "Level 03"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Col2" type="VBoxContainer" parent="Buttons"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Level4" type="TextureButton" parent="Buttons/Col2"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+texture_normal = ExtResource("5_4qxtg")
+texture_pressed = ExtResource("6_vl0d2")
+texture_hover = ExtResource("7_e7gcb")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Col2/Level4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -21.0
+offset_right = 28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_6yacc")
+theme_override_font_sizes/font_size = 30
+text = "Level 04"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level5" type="TextureButton" parent="Buttons/Col2"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+texture_normal = ExtResource("5_4qxtg")
+texture_pressed = ExtResource("6_vl0d2")
+texture_hover = ExtResource("7_e7gcb")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Col2/Level5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -21.0
+offset_right = 28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_6yacc")
+theme_override_font_sizes/font_size = 30
+text = "Level 05"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="TextureButton" parent="Buttons/Col2"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+texture_normal = ExtResource("5_4qxtg")
+texture_pressed = ExtResource("6_vl0d2")
+texture_hover = ExtResource("7_e7gcb")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Buttons/Col2/Back"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -21.0
+offset_right = 28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_6yacc")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Buttons/Col1/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Buttons/Col1/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Buttons/Col1/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Buttons/Col2/Level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="Buttons/Col2/Level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Buttons/Col2/Back" to="." method="_on_back_pressed"]
