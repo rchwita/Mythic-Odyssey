@@ -7,3 +7,15 @@ const LEVEL_THRESHOLDS: Array[int] = [
 	2500, # level 03 to 04
 	6300, # level 04 to 05
 ]
+
+static var completed_levels = {
+	"Level1": true,
+	"Level2": false,
+	"Level3": false,
+	"Level4": false,
+	"Level5": false,
+}
+
+static func unlock(level_name: String):
+	if level_name in completed_levels:
+		completed_levels[level_name] = true

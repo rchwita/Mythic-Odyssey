@@ -1,6 +1,7 @@
 extends Control
 
 var win: bool = false
+var next_level: String
 func _ready() -> void:
 	if win:
 		$Contents/Message.text = "You Win !!!"
