@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://br8corvuvf52t" path="res://assets/UI/Fonts/Fruktur-Regular.ttf" id="1_qwnig"]
 [ext_resource type="Script" uid="uid://b86ew3uwu82db" path="res://scripts/source_scripts/main_menu.gd" id="1_yonvy"]
-[ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap1/Tileset/Water Background color.png" id="2_d0t0a"]
+[ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap/Tileset/Water Background color.png" id="2_d0t0a"]
 [ext_resource type="Texture2D" uid="uid://p2cgqek0eeo4" path="res://assets/UI/Buttons/Button_Blue_3Slides.png" id="2_e2p27"]
 [ext_resource type="Texture2D" uid="uid://bx5txb0xgndw2" path="res://assets/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="3_ngj32"]
 [ext_resource type="Texture2D" uid="uid://ddr81q5m8b6ms" path="res://assets/UI/Banners/BigBanner.png" id="3_sh0sw"]
@@ -403,4 +403,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/HowToPlay" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,547 @@
+[gd_scene load_steps=18 format=4 uid="uid://ccl63fgwmsdix"]
+
+[ext_resource type="Script" uid="uid://cq2nnqw0t7le2" path="res://scripts/source_scripts/how_to_play.gd" id="1_dajfa"]
+[ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap/Tileset/Water Background color.png" id="1_ldo88"]
+[ext_resource type="Texture2D" uid="uid://ddr81q5m8b6ms" path="res://assets/UI/Banners/BigBanner.png" id="2_njjk6"]
+[ext_resource type="Texture2D" uid="uid://56puee4xhi4g" path="res://assets/UI/Banners/SmallBanner.png" id="3_opu06"]
+[ext_resource type="Texture2D" uid="uid://ckb4l1hw4i0il" path="res://assets/UI/Ribbons/Ribbon_Blue.png" id="4_dajfa"]
+[ext_resource type="FontFile" uid="uid://br8corvuvf52t" path="res://assets/UI/Fonts/Fruktur-Regular.ttf" id="5_53frg"]
+[ext_resource type="Texture2D" uid="uid://bdoio56vtqra" path="res://assets/UI/Buttons/SmallBlueSquareButton_Regular.png" id="6_jjgsj"]
+[ext_resource type="Texture2D" uid="uid://bboqr6rxbkwnr" path="res://assets/UI/Buttons/SmallBlueRoundButton_Regular.png" id="7_ct1ns"]
+[ext_resource type="Texture2D" uid="uid://cpjlvy44x7qo4" path="res://assets/UI/Icons/Cursor_01.png" id="8_xift5"]
+[ext_resource type="Texture2D" uid="uid://dbnj2wef6500m" path="res://assets/UI/Buttons/TinySquareBlueButton.png" id="9_opu06"]
+[ext_resource type="Texture2D" uid="uid://bv8awetugepwb" path="res://assets/UI/Buttons/TinySquareRedButton.png" id="10_dajfa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2k8y0"]
+texture = ExtResource("1_ldo88")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0u4eq"]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_2k8y0")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mn371"]
+texture = ExtResource("2_njjk6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+10:0/0 = 0
+0:2/0 = 0
+5:2/0 = 0
+10:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+0:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+6:6/0 = 0
+0:7/0 = 0
+2:7/0 = 0
+4:7/0 = 0
+6:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_edxxi"]
+texture = ExtResource("3_opu06")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+3:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0joe"]
+texture = ExtResource("4_dajfa")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6wgfx"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_mn371")
+sources/1 = SubResource("TileSetAtlasSource_edxxi")
+sources/2 = SubResource("TileSetAtlasSource_u0joe")
+
+[node name="HowToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dajfa")
+
+[node name="Design" type="TileMapLayer" parent="."]
+position = Vector2(-3, 0)
+
+[node name="BackGround" type="TileMapLayer" parent="Design"]
+tile_map_data = PackedByteArray("AAD+//7/AQAAAAAAAAD+////AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD+/wIAAQAAAAAAAAD+/wMAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wUAAQAAAAAAAAD+/wYAAQAAAAAAAAD+/wcAAQAAAAAAAAD+/wgAAQAAAAAAAAD+/wkAAQAAAAAAAAD+/woAAQAAAAAAAAD+/wsAAQAAAAAAAAD+/wwAAQAAAAAAAAD///7/AQAAAAAAAAD/////AQAAAAAAAAD//wAAAQAAAAAAAAD//wEAAQAAAAAAAAD//wIAAQAAAAAAAAD//wMAAQAAAAAAAAD//wQAAQAAAAAAAAD//wUAAQAAAAAAAAD//wYAAQAAAAAAAAD//wcAAQAAAAAAAAD//wgAAQAAAAAAAAD//wkAAQAAAAAAAAD//woAAQAAAAAAAAD//wsAAQAAAAAAAAD//wwAAQAAAAAAAAAAAP7/AQAAAAAAAAAAAP//AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAgAAQAAAAAAAAAAAAkAAQAAAAAAAAAAAAoAAQAAAAAAAAAAAAsAAQAAAAAAAAAAAAwAAQAAAAAAAAABAP7/AQAAAAAAAAABAP//AQAAAAAAAAABAAAAAQAAAAAAAAABAAEAAQAAAAAAAAABAAIAAQAAAAAAAAABAAMAAQAAAAAAAAABAAQAAQAAAAAAAAABAAUAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAABAAgAAQAAAAAAAAABAAkAAQAAAAAAAAABAAoAAQAAAAAAAAABAAsAAQAAAAAAAAABAAwAAQAAAAAAAAACAP7/AQAAAAAAAAACAP//AQAAAAAAAAACAAAAAQAAAAAAAAACAAEAAQAAAAAAAAACAAIAAQAAAAAAAAACAAMAAQAAAAAAAAACAAQAAQAAAAAAAAACAAUAAQAAAAAAAAACAAYAAQAAAAAAAAACAAcAAQAAAAAAAAACAAgAAQAAAAAAAAACAAkAAQAAAAAAAAACAAoAAQAAAAAAAAACAAsAAQAAAAAAAAACAAwAAQAAAAAAAAADAP7/AQAAAAAAAAADAP//AQAAAAAAAAADAAAAAQAAAAAAAAADAAEAAQAAAAAAAAADAAIAAQAAAAAAAAADAAMAAQAAAAAAAAADAAQAAQAAAAAAAAADAAUAAQAAAAAAAAADAAYAAQAAAAAAAAADAAcAAQAAAAAAAAADAAgAAQAAAAAAAAADAAkAAQAAAAAAAAADAAoAAQAAAAAAAAADAAsAAQAAAAAAAAADAAwAAQAAAAAAAAAEAP7/AQAAAAAAAAAEAP//AQAAAAAAAAAEAAAAAQAAAAAAAAAEAAEAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAMAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAAEAAYAAQAAAAAAAAAEAAcAAQAAAAAAAAAEAAgAAQAAAAAAAAAEAAkAAQAAAAAAAAAEAAoAAQAAAAAAAAAEAAsAAQAAAAAAAAAEAAwAAQAAAAAAAAAFAP7/AQAAAAAAAAAFAP//AQAAAAAAAAAFAAAAAQAAAAAAAAAFAAEAAQAAAAAAAAAFAAIAAQAAAAAAAAAFAAMAAQAAAAAAAAAFAAQAAQAAAAAAAAAFAAUAAQAAAAAAAAAFAAYAAQAAAAAAAAAFAAcAAQAAAAAAAAAFAAgAAQAAAAAAAAAFAAkAAQAAAAAAAAAFAAoAAQAAAAAAAAAFAAsAAQAAAAAAAAAFAAwAAQAAAAAAAAAGAP7/AQAAAAAAAAAGAP//AQAAAAAAAAAGAAAAAQAAAAAAAAAGAAEAAQAAAAAAAAAGAAIAAQAAAAAAAAAGAAMAAQAAAAAAAAAGAAQAAQAAAAAAAAAGAAUAAQAAAAAAAAAGAAYAAQAAAAAAAAAGAAcAAQAAAAAAAAAGAAgAAQAAAAAAAAAGAAkAAQAAAAAAAAAGAAoAAQAAAAAAAAAGAAsAAQAAAAAAAAAGAAwAAQAAAAAAAAAHAP7/AQAAAAAAAAAHAP//AQAAAAAAAAAHAAAAAQAAAAAAAAAHAAEAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAMAAQAAAAAAAAAHAAQAAQAAAAAAAAAHAAUAAQAAAAAAAAAHAAYAAQAAAAAAAAAHAAcAAQAAAAAAAAAHAAgAAQAAAAAAAAAHAAkAAQAAAAAAAAAHAAoAAQAAAAAAAAAHAAsAAQAAAAAAAAAHAAwAAQAAAAAAAAAIAP7/AQAAAAAAAAAIAP//AQAAAAAAAAAIAAAAAQAAAAAAAAAIAAEAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAMAAQAAAAAAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAAAAAAIAAYAAQAAAAAAAAAIAAcAAQAAAAAAAAAIAAgAAQAAAAAAAAAIAAkAAQAAAAAAAAAIAAoAAQAAAAAAAAAIAAsAAQAAAAAAAAAIAAwAAQAAAAAAAAAJAP7/AQAAAAAAAAAJAP//AQAAAAAAAAAJAAAAAQAAAAAAAAAJAAEAAQAAAAAAAAAJAAIAAQAAAAAAAAAJAAMAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAJAAYAAQAAAAAAAAAJAAcAAQAAAAAAAAAJAAgAAQAAAAAAAAAJAAkAAQAAAAAAAAAJAAoAAQAAAAAAAAAJAAsAAQAAAAAAAAAJAAwAAQAAAAAAAAAKAP7/AQAAAAAAAAAKAP//AQAAAAAAAAAKAAAAAQAAAAAAAAAKAAEAAQAAAAAAAAAKAAIAAQAAAAAAAAAKAAMAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAAAAAAKAAYAAQAAAAAAAAAKAAcAAQAAAAAAAAAKAAgAAQAAAAAAAAAKAAkAAQAAAAAAAAAKAAoAAQAAAAAAAAAKAAsAAQAAAAAAAAAKAAwAAQAAAAAAAAALAP7/AQAAAAAAAAALAP//AQAAAAAAAAALAAAAAQAAAAAAAAALAAEAAQAAAAAAAAALAAIAAQAAAAAAAAALAAMAAQAAAAAAAAALAAQAAQAAAAAAAAALAAUAAQAAAAAAAAALAAYAAQAAAAAAAAALAAcAAQAAAAAAAAALAAgAAQAAAAAAAAALAAkAAQAAAAAAAAALAAoAAQAAAAAAAAALAAsAAQAAAAAAAAALAAwAAQAAAAAAAAAMAP7/AQAAAAAAAAAMAP//AQAAAAAAAAAMAAAAAQAAAAAAAAAMAAEAAQAAAAAAAAAMAAIAAQAAAAAAAAAMAAMAAQAAAAAAAAAMAAQAAQAAAAAAAAAMAAUAAQAAAAAAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAAAAAAMAAgAAQAAAAAAAAAMAAkAAQAAAAAAAAAMAAoAAQAAAAAAAAAMAAsAAQAAAAAAAAAMAAwAAQAAAAAAAAANAP7/AQAAAAAAAAANAP//AQAAAAAAAAANAAAAAQAAAAAAAAANAAEAAQAAAAAAAAANAAIAAQAAAAAAAAANAAMAAQAAAAAAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAANAAYAAQAAAAAAAAANAAcAAQAAAAAAAAANAAgAAQAAAAAAAAANAAkAAQAAAAAAAAANAAoAAQAAAAAAAAANAAsAAQAAAAAAAAANAAwAAQAAAAAAAAAOAP7/AQAAAAAAAAAOAP//AQAAAAAAAAAOAAAAAQAAAAAAAAAOAAEAAQAAAAAAAAAOAAIAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAQAAQAAAAAAAAAOAAUAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAcAAQAAAAAAAAAOAAgAAQAAAAAAAAAOAAkAAQAAAAAAAAAOAAoAAQAAAAAAAAAOAAsAAQAAAAAAAAAOAAwAAQAAAAAAAAAPAP7/AQAAAAAAAAAPAP//AQAAAAAAAAAPAAAAAQAAAAAAAAAPAAEAAQAAAAAAAAAPAAIAAQAAAAAAAAAPAAMAAQAAAAAAAAAPAAQAAQAAAAAAAAAPAAUAAQAAAAAAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAAAAAAPAAgAAQAAAAAAAAAPAAkAAQAAAAAAAAAPAAoAAQAAAAAAAAAPAAsAAQAAAAAAAAAPAAwAAQAAAAAAAAAQAP7/AQAAAAAAAAAQAP//AQAAAAAAAAAQAAAAAQAAAAAAAAAQAAEAAQAAAAAAAAAQAAIAAQAAAAAAAAAQAAMAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAYAAQAAAAAAAAAQAAcAAQAAAAAAAAAQAAgAAQAAAAAAAAAQAAkAAQAAAAAAAAAQAAoAAQAAAAAAAAAQAAsAAQAAAAAAAAAQAAwAAQAAAAAAAAARAP7/AQAAAAAAAAARAP//AQAAAAAAAAARAAAAAQAAAAAAAAARAAEAAQAAAAAAAAARAAIAAQAAAAAAAAARAAMAAQAAAAAAAAARAAQAAQAAAAAAAAARAAUAAQAAAAAAAAARAAYAAQAAAAAAAAARAAcAAQAAAAAAAAARAAgAAQAAAAAAAAARAAkAAQAAAAAAAAARAAoAAQAAAAAAAAARAAsAAQAAAAAAAAARAAwAAQAAAAAAAAASAP7/AQAAAAAAAAASAP//AQAAAAAAAAASAAAAAQAAAAAAAAASAAEAAQAAAAAAAAASAAIAAQAAAAAAAAASAAMAAQAAAAAAAAASAAQAAQAAAAAAAAASAAUAAQAAAAAAAAASAAYAAQAAAAAAAAASAAcAAQAAAAAAAAASAAgAAQAAAAAAAAASAAkAAQAAAAAAAAASAAoAAQAAAAAAAAASAAsAAQAAAAAAAAASAAwAAQAAAAAAAAATAP7/AQAAAAAAAAATAP//AQAAAAAAAAATAAAAAQAAAAAAAAATAAEAAQAAAAAAAAATAAIAAQAAAAAAAAATAAMAAQAAAAAAAAATAAQAAQAAAAAAAAATAAUAAQAAAAAAAAATAAYAAQAAAAAAAAATAAcAAQAAAAAAAAATAAgAAQAAAAAAAAATAAkAAQAAAAAAAAATAAoAAQAAAAAAAAATAAsAAQAAAAAAAAATAAwAAQAAAAAAAAAUAP7/AQAAAAAAAAAUAP//AQAAAAAAAAAUAAAAAQAAAAAAAAAUAAEAAQAAAAAAAAAUAAIAAQAAAAAAAAAUAAMAAQAAAAAAAAAUAAQAAQAAAAAAAAAUAAUAAQAAAAAAAAAUAAYAAQAAAAAAAAAUAAcAAQAAAAAAAAAUAAgAAQAAAAAAAAAUAAkAAQAAAAAAAAAUAAoAAQAAAAAAAAAUAAsAAQAAAAAAAAAUAAwAAQAAAAAAAAAVAP7/AQAAAAAAAAAVAP//AQAAAAAAAAAVAAAAAQAAAAAAAAAVAAEAAQAAAAAAAAAVAAIAAQAAAAAAAAAVAAMAAQAAAAAAAAAVAAQAAQAAAAAAAAAVAAUAAQAAAAAAAAAVAAYAAQAAAAAAAAAVAAcAAQAAAAAAAAAVAAgAAQAAAAAAAAAVAAkAAQAAAAAAAAAVAAoAAQAAAAAAAAAVAAsAAQAAAAAAAAAVAAwAAQAAAAAAAAAWAP7/AQAAAAAAAAAWAP//AQAAAAAAAAAWAAAAAQAAAAAAAAAWAAEAAQAAAAAAAAAWAAIAAQAAAAAAAAAWAAMAAQAAAAAAAAAWAAQAAQAAAAAAAAAWAAUAAQAAAAAAAAAWAAYAAQAAAAAAAAAWAAcAAQAAAAAAAAAWAAgAAQAAAAAAAAAWAAkAAQAAAAAAAAAWAAoAAQAAAAAAAAAWAAsAAQAAAAAAAAAWAAwAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_0u4eq")
+
+[node name="Items" type="TileMapLayer" parent="Design"]
+position = Vector2(-2, 2)
+tile_map_data = PackedByteArray("AAAIAAEAAgAAAAEAAAAJAAEAAgABAAEAAAAKAAEAAgADAAEAAAALAAEAAgADAAEAAAAMAAEAAgADAAEAAAANAAEAAgADAAEAAAAOAAEAAgADAAEAAAAPAAEAAgADAAEAAAAQAAEAAgADAAEAAAARAAEAAgAMAAcAAAARAAIAAgAMAAgAAAASAAEAAgANAAcAAAASAAIAAgANAAgAAAATAAIAAgAOAAgAAAAIAAAAAgAAAAAAAAAJAAAAAgABAAAAAAAKAAAAAgADAAAAAAALAAAAAgADAAAAAAAMAAAAAgADAAAAAAANAAAAAgADAAAAAAAOAAAAAgADAAAAAAAPAAAAAgADAAAAAAAQAAAAAgADAAAAAAARAAAAAgAMAAYAAAASAAAAAgANAAYAAAATAAEAAgAOAAcAAAARAAgAAgAMAAMAAAARAAkAAgAMAAQAAAARAAoAAgAMAAUAAAASAAgAAgANAAMAAAASAAkAAgANAAQAAAASAAoAAgANAAUAAAATAAgAAgAOAAMAAAATAAkAAgAOAAQAAAATAAcAAAAKAAIAAAATAAYAAAAKAAIAAAATAAUAAAAKAAIAAAATAAQAAAAKAAIAAAATAAMAAAAKAAIAAAAQAAgAAAAGAAQAAAAMAAgAAAAEAAQAAAANAAgAAAAEAAQAAAAOAAgAAAAEAAQAAAAPAAgAAAAEAAQAAAAIAAkAAgADAAAAAAAJAAkAAgADAAAAAAAKAAkAAgADAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAEAAAAAAAKAAIAAAAEAAAAAAALAAIAAAAEAAAAAAAMAAIAAAAEAAAAAAANAAIAAAAEAAAAAAAOAAIAAAAEAAAAAAAPAAIAAAAGAAAAAAAQAAIAAAAGAAAAAAAIAAMAAAAAAAIAAAAIAAQAAAAAAAIAAAAIAAUAAAAAAAIAAAAIAAYAAAAAAAQAAAAIAAcAAAAAAAUAAAAJAAMAAAAFAAIAAAAJAAQAAAAFAAIAAAAKAAQAAAAFAAIAAAAKAAMAAAAFAAIAAAALAAMAAAAFAAIAAAAMAAMAAAAFAAIAAAANAAMAAAAFAAIAAAAOAAMAAAAFAAIAAAAPAAMAAAAFAAIAAAAQAAMAAAAFAAIAAAARAAMAAAAFAAIAAAASAAMAAAAFAAIAAAASAAQAAAAFAAIAAAARAAQAAAAFAAIAAAAQAAQAAAAFAAIAAAAPAAQAAAAFAAIAAAAOAAQAAAAFAAIAAAANAAQAAAAFAAIAAAAMAAQAAAAFAAIAAAALAAQAAAAFAAIAAAALAAUAAAAFAAIAAAAKAAUAAAAFAAIAAAAKAAYAAAACAAQAAAAJAAYAAAABAAQAAAAJAAUAAAAFAAIAAAAMAAUAAAAFAAIAAAANAAUAAAAFAAIAAAAOAAUAAAAFAAIAAAAPAAUAAAAFAAIAAAAQAAUAAAAFAAIAAAARAAUAAAAFAAIAAAASAAUAAAAFAAIAAAASAAYAAAAFAAIAAAASAAcAAAAFAAIAAAARAAcAAAAFAAIAAAAQAAcAAAAFAAIAAAAQAAYAAAAFAAIAAAARAAYAAAAFAAIAAAAPAAYAAAAFAAIAAAAOAAYAAAAFAAIAAAANAAYAAAAFAAIAAAAMAAYAAAAFAAIAAAALAAYAAAAEAAYAAAALAAcAAAAEAAcAAAAKAAcAAAACAAUAAAAJAAcAAAABAAUAAAAMAAcAAAAFAAIAAAANAAcAAAAFAAIAAAAOAAcAAAAFAAIAAAAPAAcAAAAFAAIAAAAQAAkAAgADAAAAAAAQAAoAAgADAAEAAAAPAAkAAgADAAAAAAAPAAoAAgADAAEAAAAOAAkAAgADAAAAAAAOAAoAAgADAAEAAAANAAkAAgADAAAAAAANAAoAAgADAAEAAAAMAAkAAgADAAAAAAAMAAoAAgADAAEAAAALAAkAAgADAAAAAAALAAoAAgADAAEAAAAKAAoAAgADAAEAAAAJAAoAAgADAAEAAAAIAAoAAgADAAEAAAAHAAkAAgAKAAQAAAAHAAoAAgAKAAUAAAAGAAkAAgAJAAQAAAAGAAoAAgAJAAUAAAAFAAkAAgAIAAQAAAABAAEAAAAAAAAAAAALAAgAAAAAAAQAAAAFAAgAAAAEAAcAAAAGAAgAAAAJAAQAAAAHAAgAAAAKAAQAAAAFAAcAAAAEAAYAAAABAAcAAgAIAAAAAAABAAgAAgAIAAEAAAABAAkAAgAIAAIAAAACAAcAAgAJAAAAAAACAAgAAgAJAAEAAAACAAkAAgAJAAIAAAADAAcAAgAKAAAAAAADAAgAAgAKAAEAAAADAAkAAgAKAAIAAAAEAAcAAAAEAAQAAAAHAAcAAAAKAAIAAAAHAAYAAAAKAAIAAAAHAAUAAAAKAAIAAAAHAAQAAAAKAAIAAAAHAAMAAAAKAAIAAAAHAAIAAAAKAAIAAAAHAAEAAAAKAAAAAAAGAAEAAAAEAAAAAAAFAAEAAAAEAAAAAAAEAAEAAAAEAAAAAAADAAEAAAAEAAAAAAACAAEAAAAEAAAAAAABAAIAAAAAAAIAAAABAAMAAAAAAAIAAAABAAQAAAAAAAIAAAABAAUAAAAAAAIAAAABAAYAAAAAAAIAAAACAAIAAAAFAAIAAAACAAMAAAAFAAIAAAACAAQAAAAFAAIAAAACAAUAAAAFAAIAAAACAAYAAAAFAAIAAAADAAYAAAAFAAIAAAADAAUAAAAFAAIAAAADAAQAAAAFAAIAAAADAAMAAAAFAAIAAAADAAIAAAAFAAIAAAAEAAIAAAAFAAIAAAAEAAMAAAAFAAIAAAAEAAQAAAAFAAIAAAAEAAUAAAAFAAIAAAAEAAYAAAAFAAIAAAAFAAYAAAAFAAIAAAAFAAUAAAAFAAIAAAAFAAQAAAAFAAIAAAAFAAMAAAAFAAIAAAAFAAIAAAAFAAIAAAAGAAIAAAAFAAIAAAAGAAMAAAAFAAIAAAAGAAQAAAAFAAIAAAAGAAUAAAAFAAIAAAAGAAYAAAAFAAIAAAAGAAcAAAAFAAIAAAA=")
+tile_set = SubResource("TileSet_6wgfx")
+
+[node name="Label" type="Label" parent="Design/Items"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 721.0
+offset_top = 22.0
+offset_right = 1042.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 60
+text = "How to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Design/Items"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 517.0
+offset_top = 599.0
+offset_right = 1087.0
+offset_bottom = 675.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 60
+text = "< < < < < < < < < < < < < < < "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="TileMapLayer" parent="Design"]
+
+[node name="UpButton" type="TileMapLayer" parent="Design/Description"]
+position = Vector2(16, 0)
+
+[node name="SmallBlueSquareButtonRegular" type="Sprite2D" parent="Design/Description/UpButton"]
+position = Vector2(268, 120)
+texture = ExtResource("6_jjgsj")
+
+[node name="Key" type="Label" parent="Design/Description/UpButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 218.0
+offset_top = 81.0
+offset_right = 319.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 60
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Design/Description/UpButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 180.0
+offset_top = 153.0
+offset_right = 360.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 30
+text = "Up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeftButton" type="TileMapLayer" parent="Design/Description"]
+position = Vector2(-29, -16)
+
+[node name="SmallBlueSquareButtonRegular" type="Sprite2D" parent="Design/Description/LeftButton"]
+position = Vector2(173, 271)
+texture = ExtResource("6_jjgsj")
+
+[node name="Key" type="Label" parent="Design/Description/LeftButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 123.0
+offset_top = 232.0
+offset_right = 224.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 60
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Design/Description/LeftButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 85.0
+offset_top = 304.0
+offset_right = 265.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 30
+text = "Left"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RightButton" type="TileMapLayer" parent="Design/Description"]
+position = Vector2(27, -19)
+
+[node name="SmallBlueSquareButtonRegular" type="Sprite2D" parent="Design/Description/RightButton"]
+position = Vector2(392, 271)
+texture = ExtResource("6_jjgsj")
+
+[node name="Key" type="Label" parent="Design/Description/RightButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 342.0
+offset_top = 232.0
+offset_right = 443.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 60
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Design/Description/RightButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 304.0
+offset_top = 304.0
+offset_right = 484.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 30
+text = "Right"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DownButton" type="TileMapLayer" parent="Design/Description"]
+position = Vector2(6, -166)
+
+[node name="SmallBlueSquareButtonRegular" type="Sprite2D" parent="Design/Description/DownButton"]
+position = Vector2(278, 418)
+texture = ExtResource("6_jjgsj")
+
+[node name="Key" type="Label" parent="Design/Description/DownButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 228.0
+offset_top = 379.0
+offset_right = 329.0
+offset_bottom = 455.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 60
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Design/Description/DownButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 190.0
+offset_top = 451.0
+offset_right = 370.0
+offset_bottom = 502.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 30
+text = "Down"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Design/Description"]
+
+[node name="SmallBlueRoundButtonRegular" type="Sprite2D" parent="Design/Description/TileMapLayer"]
+position = Vector2(226, 420)
+texture = ExtResource("7_ct1ns")
+
+[node name="Cursor01" type="Sprite2D" parent="Design/Description/TileMapLayer"]
+position = Vector2(224, 417)
+scale = Vector2(1.78125, 1.78125)
+texture = ExtResource("8_xift5")
+
+[node name="Text" type="Label" parent="Design/Description/TileMapLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 244.0
+offset_top = 395.0
+offset_right = 424.0
+offset_bottom = 446.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 30
+text = "Attack"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="Label" parent="Design"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 561.0
+offset_top = 152.0
+offset_right = 1265.0
+offset_bottom = 353.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 30
+text = "To move the player
+Use the a, s, d, w keys. For moving up, down, 
+left and right press the w, s, a and d keys 
+respectively."
+vertical_alignment = 1
+
+[node name="Text2" type="Label" parent="Design"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 722.0
+offset_top = 332.5
+offset_right = 1233.0
+offset_bottom = 534.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 30
+text = "To attack on the enemy use the mouse. Drag your mouse to the direction in whice you want to attack. This helps you to attack in all direction."
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 1231.0
+offset_top = 25.0
+offset_right = 1331.0
+offset_bottom = 125.0
+texture_normal = ExtResource("9_opu06")
+texture_pressed = ExtResource("6_jjgsj")
+texture_hover = ExtResource("10_dajfa")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BackButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -45.0
+offset_right = 16.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_53frg")
+theme_override_font_sizes/font_size = 60
+text = "<"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
