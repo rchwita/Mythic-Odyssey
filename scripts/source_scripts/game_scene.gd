@@ -33,7 +33,7 @@ func enemy_died(exp_reward: int) -> void:
 		var next_level = running_level()
 		@warning_ignore("static_called_on_instance")
 		LevelData.unlock(next_level)
-		display_end_game_screen(true, next_level)
+		display_end_game_screen(true)
 
 func running_level() -> String:
 	var level = get_node("Maps").get_child(0)
@@ -59,10 +59,9 @@ func experience_gained(exp_gain: int) -> void:
 	else:
 		PlayerData.experience = new_experience
 
-func display_end_game_screen(win: bool, level: String) -> void:
+func display_end_game_screen(win: bool) -> void:
 	var end_game_screen_instance: Control = end_game_screen_packed.instantiate()
 	end_game_screen_instance.win = win
-	end_game_screen_instance.next_level = level
 	end_game_screen_instance.replay_level = $Maps.get_child(0).scene_file_path
 	$UI.add_child(end_game_screen_instance)
 	$Maps.process_mode = Node.PROCESS_MODE_DISABLED
