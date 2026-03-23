@@ -1,8 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://bveupo6w2egkn"]
+[gd_scene load_steps=32 format=3 uid="uid://bveupo6w2egkn"]
 
 [ext_resource type="Texture2D" uid="uid://cshokjn15qfxn" path="res://assets/player/Warrior_Blue.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://pj5uv4d1mvqp" path="res://scripts/source_scripts/player.gd" id="1_g2els"]
-[ext_resource type="AudioStream" uid="uid://co5rrlhgpuwfl" path="res://assets/Audio/digital_footstep_grass_1.wav" id="3_1ie0h"]
+[ext_resource type="AudioStream" uid="uid://d0n87owq4in10" path="res://assets/Audio/spinopel-running-on-dirt-road-345729.mp3" id="3_1ie0h"]
+[ext_resource type="AudioStream" uid="uid://cmd3uhr3rhjlx" path="res://assets/Audio/mixkit-metal-hit-woosh-1485.ogg" id="4_42nxq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yk7k6"]
 radius = 20.0
@@ -417,6 +418,9 @@ parameters/attack/BlendSpace2D/blend_position = Vector2(0, 0)
 
 [node name="PlayerRun" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_1ie0h")
+
+[node name="PlayerAttack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_42nxq")
 
 [node name="HurtBox" type="Area2D" parent="."]
 collision_layer = 32

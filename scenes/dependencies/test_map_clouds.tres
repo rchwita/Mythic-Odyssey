@@ -1,13 +1,13 @@
 [gd_resource type="TileSet" load_steps=17 format=3 uid="uid://qmf0e4b56mtw"]
 
-[ext_resource type="Texture2D" uid="uid://d38r4864pcquo" path="res://assets/TileMap1/Tileset/Clouds/Clouds_01.png" id="1_pi5n7"]
-[ext_resource type="Texture2D" uid="uid://dbwgluvuax0vs" path="res://assets/TileMap1/Tileset/Clouds/Clouds_02.png" id="2_0w3me"]
-[ext_resource type="Texture2D" uid="uid://bxk23eexgjdxw" path="res://assets/TileMap1/Tileset/Clouds/Clouds_03.png" id="3_o35m2"]
-[ext_resource type="Texture2D" uid="uid://bb0o6sdom72oi" path="res://assets/TileMap1/Tileset/Clouds/Clouds_04.png" id="4_j1vkj"]
-[ext_resource type="Texture2D" uid="uid://crm34qov05s8y" path="res://assets/TileMap1/Tileset/Clouds/Clouds_05.png" id="5_ebwm2"]
-[ext_resource type="Texture2D" uid="uid://bfbur1c4nhqa4" path="res://assets/TileMap1/Tileset/Clouds/Clouds_06.png" id="6_5xwkb"]
-[ext_resource type="Texture2D" uid="uid://dx2j603g4cjkr" path="res://assets/TileMap1/Tileset/Clouds/Clouds_07.png" id="7_twoig"]
-[ext_resource type="Texture2D" uid="uid://dnlnf3v2m7i8x" path="res://assets/TileMap1/Tileset/Clouds/Clouds_08.png" id="8_cidnf"]
+[ext_resource type="Texture2D" uid="uid://d38r4864pcquo" path="res://assets/TileMap/Tileset/Clouds/Clouds_01.png" id="1_pi5n7"]
+[ext_resource type="Texture2D" uid="uid://dbwgluvuax0vs" path="res://assets/TileMap/Tileset/Clouds/Clouds_02.png" id="2_0w3me"]
+[ext_resource type="Texture2D" uid="uid://bxk23eexgjdxw" path="res://assets/TileMap/Tileset/Clouds/Clouds_03.png" id="3_o35m2"]
+[ext_resource type="Texture2D" uid="uid://bb0o6sdom72oi" path="res://assets/TileMap/Tileset/Clouds/Clouds_04.png" id="4_j1vkj"]
+[ext_resource type="Texture2D" uid="uid://crm34qov05s8y" path="res://assets/TileMap/Tileset/Clouds/Clouds_05.png" id="5_ebwm2"]
+[ext_resource type="Texture2D" uid="uid://bfbur1c4nhqa4" path="res://assets/TileMap/Tileset/Clouds/Clouds_06.png" id="6_5xwkb"]
+[ext_resource type="Texture2D" uid="uid://dx2j603g4cjkr" path="res://assets/TileMap/Tileset/Clouds/Clouds_07.png" id="7_twoig"]
+[ext_resource type="Texture2D" uid="uid://dnlnf3v2m7i8x" path="res://assets/TileMap/Tileset/Clouds/Clouds_08.png" id="8_cidnf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i43pf"]
 texture = ExtResource("1_pi5n7")

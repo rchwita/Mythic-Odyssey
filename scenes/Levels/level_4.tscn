@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=4 uid="uid://cy2auuekdjx43"]
 
-[ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap1/Tileset/Water Background color.png" id="1_u4fp7"]
+[ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap/Tileset/Water Background color.png" id="1_u4fp7"]
 [ext_resource type="TileSet" uid="uid://dbn48cdba8n6f" path="res://scenes/dependencies/level_3_ground.tres" id="2_1e7ma"]
 [ext_resource type="TileSet" uid="uid://b2wrado3rgv61" path="res://scenes/dependencies/test_map_foam.tres" id="2_q4v6m"]
 [ext_resource type="TileSet" uid="uid://dpsrvwuc8t7xs" path="res://scenes/dependencies/plataeu3.tres" id="4_am53q"]
@@ -8,7 +8,7 @@
 [ext_resource type="TileSet" uid="uid://docf4hsb2q5v1" path="res://scenes/dependencies/test_map_props.tres" id="6_ektgg"]
 [ext_resource type="PackedScene" uid="uid://bveupo6w2egkn" path="res://scenes/entities/player.tscn" id="7_am53q"]
 [ext_resource type="TileSet" uid="uid://qmf0e4b56mtw" path="res://scenes/dependencies/test_map_clouds.tres" id="7_ts8eg"]
-[ext_resource type="Texture2D" uid="uid://bebwi3a7x4wi6" path="res://assets/TileMap1/NavMeshPainter.png" id="8_glw47"]
+[ext_resource type="Texture2D" uid="uid://bebwi3a7x4wi6" path="res://assets/TileMap/NavMeshPainter.png" id="8_glw47"]
 [ext_resource type="PackedScene" uid="uid://duplnd3ut3e00" path="res://scenes/entities/enemy.tscn" id="9_um320"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijwxj"]
@@ -83,6 +83,7 @@ tile_set = SubResource("TileSet_qvnao")
 position = Vector2(4871, 6784)
 
 [node name="Enemies" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("9_um320")]
 position = Vector2(693, 1003)

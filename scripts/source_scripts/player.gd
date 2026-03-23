@@ -12,6 +12,7 @@ signal update_hp_bar(value: int)
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var animation_playback: AnimationNodeStateMachinePlayback = $AnimationTree["parameters/playback"]
 @onready var player_run: AudioStreamPlayer = $PlayerRun
+@onready var player_attack: AudioStreamPlayer = $PlayerAttack
 
 var move_direction: Vector2 = Vector2.ZERO # current direction of the player
 var attack_speed: float 
@@ -62,8 +63,8 @@ func movement_loop() -> void:
 			$Sprite2D.flip_h = false
 	
 	move_and_slide() # for 4-direction movement
-
-# RUNNING SOUND CONTROL
+	
+	# RUNNING SOUND CONTROL
 	if motion != Vector2.ZERO:
 		if not player_run.playing:
 			player_run.play()
@@ -84,6 +85,7 @@ func attack() -> void:
 	if state == State.ATTACK:
 		return
 	state = State.ATTACK
+	player_attack.play()
 	
 	# finding attack direction
 	var mouse_position: Vector2 = get_global_mouse_position() # position of the mouse
