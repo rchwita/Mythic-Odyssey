@@ -22,9 +22,7 @@ LevelData="*res://scripts/global_data/level_data.gd"
 
 [display]
 
-window/size/viewport_width=1366
-window/size/viewport_height=768
-window/size/mode=2
+window/stretch/mode="canvas_items"
 
 [global_group]
 
