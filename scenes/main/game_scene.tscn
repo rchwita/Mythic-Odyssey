@@ -86,10 +86,10 @@ vertical_alignment = 1
 
 [node name="PauseButton" type="TextureButton" parent="UI"]
 custom_minimum_size = Vector2(100, 100)
-offset_left = 1205.0
-offset_top = 70.0
-offset_right = 1305.0
-offset_bottom = 170.0
+offset_left = 1000.0
+offset_top = 50.0
+offset_right = 1100.0
+offset_bottom = 150.0
 texture_normal = ExtResource("7_wktqh")
 texture_pressed = ExtResource("8_wktqh")
 texture_hover = ExtResource("9_tj35g")
