@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=4 uid="uid://c4lbbh0f1n8c"]
 
-[ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap1/Tileset/Water Background color.png" id="1_4wuf8"]
+[ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap/Tileset/Water Background color.png" id="1_4wuf8"]
 [ext_resource type="TileSet" uid="uid://b2wrado3rgv61" path="res://scenes/dependencies/test_map_foam.tres" id="2_auue8"]
 [ext_resource type="TileSet" uid="uid://b3advwvm2cjy5" path="res://scenes/dependencies/test_map_ground.tres" id="4_acmlw"]
 [ext_resource type="TileSet" uid="uid://d3qcq0htkw3gj" path="res://scenes/dependencies/test_map_shadow.tres" id="5_lk7yb"]
@@ -8,7 +8,7 @@
 [ext_resource type="TileSet" uid="uid://docf4hsb2q5v1" path="res://scenes/dependencies/test_map_props.tres" id="6_q2e4k"]
 [ext_resource type="TileSet" uid="uid://qmf0e4b56mtw" path="res://scenes/dependencies/test_map_clouds.tres" id="7_o5aat"]
 [ext_resource type="PackedScene" uid="uid://bveupo6w2egkn" path="res://scenes/entities/player.tscn" id="7_ssfg1"]
-[ext_resource type="Texture2D" uid="uid://bebwi3a7x4wi6" path="res://assets/TileMap1/NavMeshPainter.png" id="26_uv76m"]
+[ext_resource type="Texture2D" uid="uid://bebwi3a7x4wi6" path="res://assets/TileMap/NavMeshPainter.png" id="26_uv76m"]
 [ext_resource type="PackedScene" uid="uid://duplnd3ut3e00" path="res://scenes/entities/enemy.tscn" id="27_pjm8e"]
 [ext_resource type="Script" uid="uid://ceshtakp04lyk" path="res://scripts/source_scripts/dead.gd" id="29_wookx"]
 [ext_resource type="Texture2D" uid="uid://du3goy8vtufnl" path="res://assets/Dead/Dead.png" id="30_acmlw"]
@@ -78,7 +78,7 @@ _data = {
 &"death": SubResource("Animation_4orh1")
 }
 
-[sub_resource type="PackedScene" id="PackedScene_iav0o"]
+[sub_resource type="PackedScene" id="PackedScene_14nfc"]
 resource_local_to_scene = true
 _bundled = {
 "conn_count": 1,
@@ -94,7 +94,7 @@ _bundled = {
 "version": 3
 }
 
-[sub_resource type="PackedScene" id="PackedScene_dnkej"]
+[sub_resource type="PackedScene" id="PackedScene_ngn3o"]
 resource_local_to_scene = true
 _bundled = {
 "conn_count": 1,
@@ -110,7 +110,7 @@ _bundled = {
 "version": 3
 }
 
-[sub_resource type="PackedScene" id="PackedScene_mm8aj"]
+[sub_resource type="PackedScene" id="PackedScene_iiv34"]
 resource_local_to_scene = true
 _bundled = {
 "conn_count": 1,
@@ -126,7 +126,7 @@ _bundled = {
 "version": 3
 }
 
-[sub_resource type="PackedScene" id="PackedScene_wtwp4"]
+[sub_resource type="PackedScene" id="PackedScene_vtd0g"]
 resource_local_to_scene = true
 _bundled = {
 "conn_count": 1,
@@ -192,18 +192,18 @@ position = Vector2(54, 22)
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("27_pjm8e")]
 position = Vector2(735, 412)
-death_packed = SubResource("PackedScene_iav0o")
+death_packed = SubResource("PackedScene_14nfc")
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource("27_pjm8e")]
 position = Vector2(-186, 190)
-death_packed = SubResource("PackedScene_dnkej")
+death_packed = SubResource("PackedScene_ngn3o")
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource("27_pjm8e")]
 position = Vector2(426, 398)
-death_packed = SubResource("PackedScene_mm8aj")
+death_packed = SubResource("PackedScene_iiv34")
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource("27_pjm8e")]
-death_packed = SubResource("PackedScene_wtwp4")
+death_packed = SubResource("PackedScene_vtd0g")
 
 [node name="Effects" type="Node2D" parent="."]
 unique_name_in_owner = true
