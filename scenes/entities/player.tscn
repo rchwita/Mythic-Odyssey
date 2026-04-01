@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cshokjn15qfxn" path="res://assets/player/Warrior_Blue.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://pj5uv4d1mvqp" path="res://scripts/source_scripts/player.gd" id="1_g2els"]
-[ext_resource type="AudioStream" uid="uid://5rssvgdv1di8" path="res://assets/Audio/Voicy_Minecraft Walking Sound.mp3" id="3_42nxq"]
-[ext_resource type="AudioStream" uid="uid://cmd3uhr3rhjlx" path="res://assets/Audio/mixkit-metal-hit-woosh-1485.ogg" id="4_42nxq"]
+[ext_resource type="AudioStream" uid="uid://bd5hcuwfurwe3" path="res://assets/Audio/run.mp3" id="3_42nxq"]
+[ext_resource type="AudioStream" uid="uid://df3detemqmqo" path="res://assets/Audio/sword_swing.ogg" id="4_5u6hq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yk7k6"]
 radius = 20.0
@@ -421,7 +421,7 @@ stream = ExtResource("3_42nxq")
 volume_db = -4.0
 
 [node name="PlayerAttack" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_42nxq")
+stream = ExtResource("4_5u6hq")
 volume_db = -15.0
 
 [node name="HurtBox" type="Area2D" parent="."]

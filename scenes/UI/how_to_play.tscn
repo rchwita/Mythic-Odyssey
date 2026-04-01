@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://ccl63fgwmsdix"]
+[gd_scene load_steps=19 format=4 uid="uid://ccl63fgwmsdix"]
 
 [ext_resource type="Script" uid="uid://cq2nnqw0t7le2" path="res://scripts/source_scripts/how_to_play.gd" id="1_dajfa"]
 [ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap/Tileset/Water Background color.png" id="1_ldo88"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cpjlvy44x7qo4" path="res://assets/UI/Icons/Cursor_01.png" id="8_xift5"]
 [ext_resource type="Texture2D" uid="uid://dbnj2wef6500m" path="res://assets/UI/Buttons/TinySquareBlueButton.png" id="9_opu06"]
 [ext_resource type="Texture2D" uid="uid://bv8awetugepwb" path="res://assets/UI/Buttons/TinySquareRedButton.png" id="10_dajfa"]
+[ext_resource type="AudioStream" uid="uid://dddvlwkld5b7v" path="res://assets/Audio/menu.mp3" id="12_53frg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2k8y0"]
 texture = ExtResource("1_ldo88")
@@ -198,7 +199,9 @@ grow_vertical = 2
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
 size = Vector2i(1152, 648)
+render_target_update_mode = 4
 
 [node name="Design" type="TileMapLayer" parent="SubViewportContainer/SubViewport"]
 position = Vector2(-3, 0)
@@ -562,5 +565,9 @@ theme_override_font_sizes/font_size = 60
 text = "<"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_53frg")
+parameters/looping = true
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

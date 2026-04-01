@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://btxrqwt6nij0b"]
+[gd_scene load_steps=8 format=3 uid="uid://btxrqwt6nij0b"]
 
 [ext_resource type="Script" uid="uid://bxtrfoleklrxe" path="res://scripts/source_scripts/end_game_screen.gd" id="1_f03wi"]
 [ext_resource type="FontFile" uid="uid://br8corvuvf52t" path="res://assets/UI/Fonts/Fruktur-Regular.ttf" id="1_v0th6"]
 [ext_resource type="Texture2D" uid="uid://p2cgqek0eeo4" path="res://assets/UI/Buttons/Button_Blue_3Slides.png" id="2_f03wi"]
 [ext_resource type="Texture2D" uid="uid://bx5txb0xgndw2" path="res://assets/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="3_f04ip"]
 [ext_resource type="Texture2D" uid="uid://dlmcrj55x8vgx" path="res://assets/UI/Buttons/Button_Hover_3Slides.png" id="4_rtum8"]
+[ext_resource type="AudioStream" uid="uid://dy17b0paa363l" path="res://assets/Audio/victory.wav" id="6_rtum8"]
+[ext_resource type="AudioStream" uid="uid://cnanxhomhj4k6" path="res://assets/Audio/loss.wav" id="7_h2t64"]
 
 [node name="EndGameScreen" type="Control"]
 layout_mode = 3
@@ -104,6 +106,12 @@ theme_override_font_sizes/font_size = 30
 text = "Back to Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Win_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_rtum8")
+
+[node name="Loss_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_h2t64")
 
 [connection signal="pressed" from="Contents/Buttons/Replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="Contents/Buttons/MainMenu" to="." method="_on_main_menu_pressed"]

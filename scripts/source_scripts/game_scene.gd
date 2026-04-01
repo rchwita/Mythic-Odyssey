@@ -5,11 +5,13 @@ signal levelup
 @export var end_game_screen_packed: PackedScene
 
 @onready var HUD: Control = $UI/HUD
+@onready var music: AudioStreamPlayer = $Background_Music
 
 var total_enemies: int
 var killed_enemies: int = 0
 
 func _ready() -> void:
+	music.play() # play the background music
 	# in Enemy node, in the Node section 
 	# under Groups (Global Groups): enemies
 	var enemies: Array = get_tree().get_nodes_in_group("enemies")
@@ -25,6 +27,7 @@ func _ready() -> void:
 	player.update_hp_bar.connect(HUD.update_hp_bar)
 
 func enemy_died(exp_reward: int) -> void:
+	$Enemy_Dead_Sound.play()
 	killed_enemies += 1
 	HUD.update_kill_value(killed_enemies)
 	experience_gained(exp_reward)
@@ -60,6 +63,7 @@ func experience_gained(exp_gain: int) -> void:
 		PlayerData.experience = new_experience
 
 func display_end_game_screen(win: bool) -> void:
+	music.stop() # background music stopped
 	var end_game_screen_instance: Control = end_game_screen_packed.instantiate()
 	end_game_screen_instance.win = win
 	end_game_screen_instance.replay_level = $Maps.get_child(0).scene_file_path

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://clr5vv53m6c5l"]
+[gd_scene load_steps=18 format=4 uid="uid://clr5vv53m6c5l"]
 
 [ext_resource type="FontFile" uid="uid://br8corvuvf52t" path="res://assets/UI/Fonts/Fruktur-Regular.ttf" id="1_6yacc"]
 [ext_resource type="Texture2D" uid="uid://c28bdlh2dkm6f" path="res://assets/TileMap/Tileset/Water Background color.png" id="1_u2ndr"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bx5txb0xgndw2" path="res://assets/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="6_vl0d2"]
 [ext_resource type="Texture2D" uid="uid://dlmcrj55x8vgx" path="res://assets/UI/Buttons/Button_Hover_3Slides.png" id="7_e7gcb"]
 [ext_resource type="Texture2D" uid="uid://cqrtvcup3nj2r" path="res://assets/UI/Buttons/Button_Blue_3Slides_disabled.png" id="10_e7gcb"]
+[ext_resource type="AudioStream" uid="uid://dddvlwkld5b7v" path="res://assets/Audio/menu.mp3" id="11_6gwu6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vl0d2"]
 texture = ExtResource("1_u2ndr")
@@ -441,6 +442,10 @@ theme_override_font_sizes/font_size = 30
 text = "Back"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_6gwu6")
+parameters/looping = true
 
 [connection signal="pressed" from="Buttons/Col1/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Buttons/Col1/Level2" to="." method="_on_level_2_pressed"]

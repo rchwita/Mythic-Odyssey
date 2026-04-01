@@ -1,6 +1,9 @@
 extends Control
 
+@onready var music: AudioStreamPlayer = $AudioStreamPlayer
+
 func _ready() -> void:
+	music.play()
 	var all_buttons = $Buttons.find_children("*", "TextureButton", true)
 	for button in all_buttons:
 		if button.name != "Back":
@@ -8,6 +11,7 @@ func _ready() -> void:
 			button.disabled = !is_unlocked
 
 func load_level(path: String):
+	music.stop()
 	var game_scene = load("res://scenes/main/game_scene.tscn").instantiate()
 	var map_container = game_scene.get_node("Maps")
 	

@@ -4,8 +4,10 @@ var win: bool = false
 var next_level: String
 func _ready() -> void:
 	if win:
+		$Win_Sound.play()
 		$Contents/Message.text = "You Win !!!"
 	else:
+		$Loss_Sound.play()
 		$Contents/Message.text = "You Lose"
 
 var replay_level: String = ""

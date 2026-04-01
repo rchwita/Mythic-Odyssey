@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://dbp685nybdb7v"]
+[gd_scene load_steps=22 format=4 uid="uid://dbp685nybdb7v"]
 
 [ext_resource type="FontFile" uid="uid://br8corvuvf52t" path="res://assets/UI/Fonts/Fruktur-Regular.ttf" id="1_qwnig"]
 [ext_resource type="Script" uid="uid://b86ew3uwu82db" path="res://scripts/source_scripts/main_menu.gd" id="1_yonvy"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cdt7nn2s3gbvv" path="res://scenes/materials/plateau.tscn" id="9_6gm0r"]
 [ext_resource type="TileSet" uid="uid://7acupsp1fm2e" path="res://scenes/dependencies/buildings.tres" id="10_cj7n5"]
 [ext_resource type="PackedScene" uid="uid://dlp0bk04pr5x7" path="res://scenes/materials/clouds.tscn" id="14_54m0d"]
+[ext_resource type="AudioStream" uid="uid://dddvlwkld5b7v" path="res://assets/Audio/menu.mp3" id="15_n3ahy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_glfox"]
 texture = ExtResource("2_d0t0a")
@@ -415,6 +416,10 @@ theme_override_font_sizes/font_size = 30
 text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_n3ahy")
+parameters/looping = true
 
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttons/HowToPlay" to="." method="_on_how_to_play_pressed"]
