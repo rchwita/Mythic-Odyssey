@@ -27,8 +27,24 @@ func save_level_data() -> void: # to store lvl complete info in local file
 
 func load_level_data() -> void:
 	var file = FileAccess.open("user://savegame.json", FileAccess.READ)
+	if file == null:
+		new_level_data()
+		file = FileAccess.open("user://savegame.json", FileAccess.READ)
+	
 	var content = file.get_as_text()
 	completed_levels = JSON.parse_string(content)
+	file.close()
+
+func new_level_data() -> void:
+	var levels_status = {
+		"Level1": true,
+		"Level2": false,
+		"Level3": false,
+		"Level4": false,
+		"Level5": false,
+	}
+	var file = FileAccess.open("user://savegame.json", FileAccess.WRITE)
+	file.store_string(JSON.stringify(levels_status))
 	file.close()
 
 func reset_level_data() -> void:

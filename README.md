@@ -11,7 +11,6 @@ Navigate to the `Installation` folder and choose the package corresponding to yo
 
 * **Linux:** `mythic_odyssey_linux.zip`
 * **Windows:** `mythic_odyssey_win.zip`
-%% * **macOS:** `mythic_odyssey_mac.zip` %%
 
 ### Steps to Play
 1.  **Download** the zip file for your OS.
@@ -20,7 +19,6 @@ Navigate to the `Installation` folder and choose the package corresponding to yo
 4.  **Run the executable**:
     * 🐧 **Linux:** `.x86_64`
     * 🪟 **Windows:** `.exe`
-    %% * 🍎 **macOS:** `.app` %%
 5.  The game will launch—prepare for your journey!
 
 Mac version will be available soon...
@@ -77,6 +75,7 @@ Meet the team behind the Odyssey:
 - **Ridowan Ahmed (Leader):** Player designer, UI interface creator, and lead debugger.
 - **Archita Biswas:** Tilemap architect and level designer.
 - **Thamid Hasan Rakin:** Enemy designer, AI logic developer, and soundscape engineer.
+- **Sargi Rahman:** Bug finder and tester.
 
 ---
 ## 📜 License

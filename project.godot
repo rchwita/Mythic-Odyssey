@@ -25,6 +25,7 @@ LevelData="*res://scripts/global_data/level_data.gd"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="uid://cpjlvy44x7qo4"
 
