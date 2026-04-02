@@ -14,4 +14,5 @@ func _on_how_to_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/UI/how_to_play.tscn")
 
 func _on_exit_pressed() -> void:
+	#LevelData.reset_level_data() # call this function for only resetting purpose
 	get_tree().quit()

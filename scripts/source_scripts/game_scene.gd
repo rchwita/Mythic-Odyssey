@@ -36,6 +36,7 @@ func enemy_died(exp_reward: int) -> void:
 		var next_level = running_level()
 		@warning_ignore("static_called_on_instance")
 		LevelData.unlock(next_level)
+		LevelData.save_level_data()
 		display_end_game_screen(true)
 
 func running_level() -> String:

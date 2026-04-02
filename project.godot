@@ -13,7 +13,10 @@ config_version=5
 config/name="Mythic Odyssey"
 run/main_scene="uid://dbp685nybdb7v"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.19607843, 0.10980392, 0.29411766, 1)
+boot_splash/fullsize=false
+boot_splash/image="uid://cuxumocap1vt4"
+config/icon="uid://by0lmngbopo1f"
 
 [autoload]
 
@@ -22,7 +25,9 @@ LevelData="*res://scripts/global_data/level_data.gd"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://cpjlvy44x7qo4"
 
 [global_group]
 

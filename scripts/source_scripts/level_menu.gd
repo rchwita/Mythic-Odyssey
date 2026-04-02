@@ -3,7 +3,9 @@ extends Control
 @onready var music: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready() -> void:
-	music.play()
+	music.play() # background music
+	LevelData.load_level_data() # load level datas
+	
 	var all_buttons = $Buttons.find_children("*", "TextureButton", true)
 	for button in all_buttons:
 		if button.name != "Back":
@@ -40,4 +42,4 @@ func _on_level_4_pressed() -> void:
 	load_level("res://scenes/Levels/level_4.tscn")
 
 func _on_level_5_pressed() -> void:
-	load_level("res://scenes/Levels/level_1.tscn")
+	load_level("res://scenes/Levels/level_5.tscn")
