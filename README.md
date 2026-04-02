@@ -11,7 +11,7 @@ Navigate to the `Installation` folder and choose the package corresponding to yo
 
 * **Linux:** `mythic_odyssey_linux.zip`
 * **Windows:** `mythic_odyssey_win.zip`
-* **macOS:** `mythic_odyssey_mac.zip`
+%% * **macOS:** `mythic_odyssey_mac.zip` %%
 
 ### Steps to Play
 1.  **Download** the zip file for your OS.
@@ -20,8 +20,10 @@ Navigate to the `Installation` folder and choose the package corresponding to yo
 4.  **Run the executable**:
     * 🐧 **Linux:** `.x86_64`
     * 🪟 **Windows:** `.exe`
-    * 🍎 **macOS:** `.app`
+    %% * 🍎 **macOS:** `.app` %%
 5.  The game will launch—prepare for your journey!
+
+Mac version will be available soon...
 
 ---
 
